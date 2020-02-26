@@ -3,28 +3,56 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF5F4ED2406D4F500E66468 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5F4EC2406D4F500E66468 /* UserProfileController.swift */; };
+		3CF5F4F02406D6A200E66468 /* UserPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5F4EE2406D6A200E66468 /* UserPropertyCell.swift */; };
+		3CF5F4F12406D6A200E66468 /* UserPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF5F4EF2406D6A200E66468 /* UserPropertyCell.xib */; };
+		3CF5F4F42406E13D00E66468 /* UserListAddPropertyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5F4F32406E13D00E66468 /* UserListAddPropertyController.swift */; };
+		3CF5F4F62406E25300E66468 /* UserAddPropertyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF5F4F52406E25300E66468 /* UserAddPropertyController.swift */; };
 		3CF959EC240676FC00DBCE0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF959EB240676FC00DBCE0D /* AppDelegate.swift */; };
 		3CF959EE240676FC00DBCE0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF959ED240676FC00DBCE0D /* SceneDelegate.swift */; };
-		3CF959F0240676FC00DBCE0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF959EF240676FC00DBCE0D /* ViewController.swift */; };
+		3CF959F0240676FC00DBCE0D /* UserAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF959EF240676FC00DBCE0D /* UserAddController.swift */; };
 		3CF959F3240676FC00DBCE0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF959F1240676FC00DBCE0D /* Main.storyboard */; };
 		3CF959F5240676FF00DBCE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF959F4240676FF00DBCE0D /* Assets.xcassets */; };
 		3CF959F8240676FF00DBCE0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF959F6240676FF00DBCE0D /* LaunchScreen.storyboard */; };
+		3CF95A02240685BC00DBCE0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95A01240685BC00DBCE0D /* GoogleService-Info.plist */; };
+		3CF95A0624068D9100DBCE0D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95A0524068D9100DBCE0D /* User.swift */; };
+		3CF95A0924069ACC00DBCE0D /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95A0824069ACC00DBCE0D /* UserFirebase.swift */; };
+		3CF95A0B2406C7F900DBCE0D /* UserMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95A0A2406C7F900DBCE0D /* UserMenuController.swift */; };
+		3CF95A0D2406C80F00DBCE0D /* UserListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95A0C2406C80F00DBCE0D /* UserListController.swift */; };
+		3CF95A112406C93800DBCE0D /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95A0F2406C93800DBCE0D /* UserCell.swift */; };
+		3CF95A122406C93800DBCE0D /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95A102406C93800DBCE0D /* UserCell.xib */; };
+		3CF95A162406CCEC00DBCE0D /* UserAddPropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF95A142406CCEC00DBCE0D /* UserAddPropertyCell.swift */; };
+		3CF95A172406CCEC00DBCE0D /* UserAddPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CF95A152406CCEC00DBCE0D /* UserAddPropertyCell.xib */; };
 		413B26B26402C36014208FB3 /* Pods_hw_myFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1067C39E542BE0CA4B750FB /* Pods_hw_myFirebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CF5F4EC2406D4F500E66468 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
+		3CF5F4EE2406D6A200E66468 /* UserPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPropertyCell.swift; sourceTree = "<group>"; };
+		3CF5F4EF2406D6A200E66468 /* UserPropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserPropertyCell.xib; sourceTree = "<group>"; };
+		3CF5F4F32406E13D00E66468 /* UserListAddPropertyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListAddPropertyController.swift; sourceTree = "<group>"; };
+		3CF5F4F52406E25300E66468 /* UserAddPropertyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddPropertyController.swift; sourceTree = "<group>"; };
 		3CF959E8240676FC00DBCE0D /* hw-myFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hw-myFirebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF959EB240676FC00DBCE0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF959ED240676FC00DBCE0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CF959EF240676FC00DBCE0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CF959EF240676FC00DBCE0D /* UserAddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddController.swift; sourceTree = "<group>"; };
 		3CF959F2240676FC00DBCE0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CF959F4240676FF00DBCE0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CF959F7240676FF00DBCE0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CF959F9240676FF00DBCE0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CF95A01240685BC00DBCE0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3CF95A0524068D9100DBCE0D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3CF95A0824069ACC00DBCE0D /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
+		3CF95A0A2406C7F900DBCE0D /* UserMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMenuController.swift; sourceTree = "<group>"; };
+		3CF95A0C2406C80F00DBCE0D /* UserListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListController.swift; sourceTree = "<group>"; };
+		3CF95A0F2406C93800DBCE0D /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		3CF95A102406C93800DBCE0D /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		3CF95A142406CCEC00DBCE0D /* UserAddPropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAddPropertyCell.swift; sourceTree = "<group>"; };
+		3CF95A152406CCEC00DBCE0D /* UserAddPropertyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserAddPropertyCell.xib; sourceTree = "<group>"; };
 		72C495C8948DDF5C42B6534D /* Pods-hw-myFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw-myFirebase.debug.xcconfig"; path = "Target Support Files/Pods-hw-myFirebase/Pods-hw-myFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		8052BB4CE1D17D203727F698 /* Pods-hw-myFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hw-myFirebase.release.xcconfig"; path = "Target Support Files/Pods-hw-myFirebase/Pods-hw-myFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		D1067C39E542BE0CA4B750FB /* Pods_hw_myFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hw_myFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +76,16 @@
 				72C495C8948DDF5C42B6534D /* Pods-hw-myFirebase.debug.xcconfig */,
 				8052BB4CE1D17D203727F698 /* Pods-hw-myFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3CF5F4F22406D6AB00E66468 /* UserPropertyCell */ = {
+			isa = PBXGroup;
+			children = (
+				3CF5F4EE2406D6A200E66468 /* UserPropertyCell.swift */,
+				3CF5F4EF2406D6A200E66468 /* UserPropertyCell.xib */,
+			);
+			path = UserPropertyCell;
 			sourceTree = "<group>";
 		};
 		3CF959DF240676FB00DBCE0D = {
@@ -73,15 +109,52 @@
 		3CF959EA240676FC00DBCE0D /* hw-myFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				3CF5F4F22406D6AB00E66468 /* UserPropertyCell */,
+				3CF95A132406CCC200DBCE0D /* UserAddPropertyCell */,
+				3CF95A0E2406C90B00DBCE0D /* UserCell */,
 				3CF959EB240676FC00DBCE0D /* AppDelegate.swift */,
 				3CF959ED240676FC00DBCE0D /* SceneDelegate.swift */,
-				3CF959EF240676FC00DBCE0D /* ViewController.swift */,
+				3CF95A0A2406C7F900DBCE0D /* UserMenuController.swift */,
+				3CF95A0C2406C80F00DBCE0D /* UserListController.swift */,
+				3CF959EF240676FC00DBCE0D /* UserAddController.swift */,
+				3CF5F4EC2406D4F500E66468 /* UserProfileController.swift */,
+				3CF5F4F32406E13D00E66468 /* UserListAddPropertyController.swift */,
+				3CF5F4F52406E25300E66468 /* UserAddPropertyController.swift */,
 				3CF959F1240676FC00DBCE0D /* Main.storyboard */,
 				3CF959F4240676FF00DBCE0D /* Assets.xcassets */,
 				3CF959F6240676FF00DBCE0D /* LaunchScreen.storyboard */,
 				3CF959F9240676FF00DBCE0D /* Info.plist */,
+				3CF95A01240685BC00DBCE0D /* GoogleService-Info.plist */,
+				3CF95A0724068D9800DBCE0D /* Model */,
 			);
 			path = "hw-myFirebase";
+			sourceTree = "<group>";
+		};
+		3CF95A0724068D9800DBCE0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3CF95A0524068D9100DBCE0D /* User.swift */,
+				3CF95A0824069ACC00DBCE0D /* UserFirebase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3CF95A0E2406C90B00DBCE0D /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				3CF95A0F2406C93800DBCE0D /* UserCell.swift */,
+				3CF95A102406C93800DBCE0D /* UserCell.xib */,
+			);
+			path = UserCell;
+			sourceTree = "<group>";
+		};
+		3CF95A132406CCC200DBCE0D /* UserAddPropertyCell */ = {
+			isa = PBXGroup;
+			children = (
+				3CF95A142406CCEC00DBCE0D /* UserAddPropertyCell.swift */,
+				3CF95A152406CCEC00DBCE0D /* UserAddPropertyCell.xib */,
+			);
+			path = UserAddPropertyCell;
 			sourceTree = "<group>";
 		};
 		8B481769963CDFAEE7BD7343 /* Frameworks */ = {
@@ -153,8 +226,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CF959F8240676FF00DBCE0D /* LaunchScreen.storyboard in Resources */,
+				3CF95A02240685BC00DBCE0D /* GoogleService-Info.plist in Resources */,
 				3CF959F5240676FF00DBCE0D /* Assets.xcassets in Resources */,
+				3CF95A172406CCEC00DBCE0D /* UserAddPropertyCell.xib in Resources */,
 				3CF959F3240676FC00DBCE0D /* Main.storyboard in Resources */,
+				3CF95A122406C93800DBCE0D /* UserCell.xib in Resources */,
+				3CF5F4F12406D6A200E66468 /* UserPropertyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +284,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CF959F0240676FC00DBCE0D /* ViewController.swift in Sources */,
+				3CF95A112406C93800DBCE0D /* UserCell.swift in Sources */,
+				3CF95A162406CCEC00DBCE0D /* UserAddPropertyCell.swift in Sources */,
+				3CF95A0624068D9100DBCE0D /* User.swift in Sources */,
+				3CF5F4F62406E25300E66468 /* UserAddPropertyController.swift in Sources */,
+				3CF5F4F42406E13D00E66468 /* UserListAddPropertyController.swift in Sources */,
+				3CF5F4F02406D6A200E66468 /* UserPropertyCell.swift in Sources */,
+				3CF959F0240676FC00DBCE0D /* UserAddController.swift in Sources */,
+				3CF95A0924069ACC00DBCE0D /* UserFirebase.swift in Sources */,
+				3CF95A0B2406C7F900DBCE0D /* UserMenuController.swift in Sources */,
 				3CF959EC240676FC00DBCE0D /* AppDelegate.swift in Sources */,
+				3CF95A0D2406C80F00DBCE0D /* UserListController.swift in Sources */,
+				3CF5F4ED2406D4F500E66468 /* UserProfileController.swift in Sources */,
 				3CF959EE240676FC00DBCE0D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
