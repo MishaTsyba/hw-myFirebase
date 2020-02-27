@@ -30,6 +30,7 @@ class UserProfileController: UIViewController {
 	}
 
 	@IBAction func didTapBackButton(_ sender: Any) {
+		debugPrint("*********** UserProfileController *** didTapBackButton  ********")
 		navigationController?.popViewController(animated: true)
 	}
 }

@@ -40,9 +40,19 @@ class UserAddController: UIViewController {
 		cityTextField.delegate = self
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(true)
+		debugPrint("*********** UserAddController *** viewWillAppear ********")
+		debugPrint(user)
+	}
+
 	@IBAction func didTapAddButton(_ sender: Any) {
+		debugPrint("*********** UserAddController *** didTapAddButton user BEFORE AddToFirebase ********")
 		user = makeDefaultUser()
+		debugPrint(user)
 		addUserToFirebase(user: user)
+		debugPrint("*********** UserAddController *** didTapAddButton user AFTER AddToFirebase ********")
+		debugPrint(user)
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: "UserListController") as! UserListController
 		navigationController?.pushViewController(vc, animated: true)

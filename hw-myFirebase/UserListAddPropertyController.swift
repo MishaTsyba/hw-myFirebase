@@ -33,7 +33,8 @@ class UserListAddPropertyController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		debugPrint("*********** UserListAddPropertyController *** viewWillAppear ********")
-		self.users = []
+		users = []
+		usersDataBaseSnapshot = [:]
 		getUsersFromFirebase()
 		usersTableView.reloadData()
 	}
@@ -72,11 +73,21 @@ extension UserListAddPropertyController: UITableViewDelegate, UITableViewDataSou
 extension UserListAddPropertyController {
 	//MARK: - Get Users from Firebase
 	func getUsersFromFirebase() {
-		ref.observeSingleEvent(of: .value, with: { (snapshot) in
+		ref.observe(.value, with: { (snapshot) in
+			debugPrint("*********** UserListAddPropertyController ***  ref.observe(.value, with: { (snapshot) ********")
+			self.usersDataBaseSnapshot = [:]
             if let value = snapshot.value as? [String: Any] {
                 if let users = value["Users"] as? [String: Any] {
                     self.usersDataBaseSnapshot = users
+					self.users = []
+					debugPrint("users: \(self.users)")
 					for (key, value) in self.usersDataBaseSnapshot {
+						debugPrint("*********** UserListAddPropertyController usersDataBaseSnapshot KEY ********")
+						debugPrint(key)
+						debugPrint("*********** UserListAddPropertyController usersDataBaseSnapshot KEY ********")
+						debugPrint("*********** UserListAddPropertyController usersDataBaseSnapshot VALUE ********")
+						debugPrint(value)
+						debugPrint("*********** UserListAddPropertyController usersDataBaseSnapshot VALUE ********")
 						let user = UserFirebase()
 						user.id = key
 						user.properties = value as? [String: Any]
@@ -84,7 +95,11 @@ extension UserListAddPropertyController {
 						self.users.sort { (first, second) -> Bool in
 							first.id! > second.id!
 						}
+					}
+					DispatchQueue.main.async {
 						self.usersTableView.reloadData()
+						debugPrint("self.users: \(self.users.count)")
+						debugPrint("self.users: \(self.users)")
 					}
                 }
             }
