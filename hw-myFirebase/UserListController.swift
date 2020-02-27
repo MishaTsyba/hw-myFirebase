@@ -23,10 +23,6 @@ class UserListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		debugPrint("*********** UserListController *** viewDidLoad ********")
-		users = []
-		debugPrint("*********** UserListController *** viewDidLoad users ********")
-		debugPrint(users)
 		designUI()
 		usersTableView.delegate = self
 		usersTableView.dataSource = self
@@ -36,11 +32,11 @@ class UserListController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		debugPrint("*********** UserListController *** viewWillAppear ********")
-		users = []
-		debugPrint("*********** UserListController *** viewWillAppear users ********")
+		debugPrint("*********** UserListController *** viewWillAppear users BEFORE LoadFirebase********")
 		debugPrint(users)
 		getUsersFromFirebase()
-		usersTableView.reloadData()
+		debugPrint("*********** UserListController *** viewWillAppear users AFTER LoadFirebase********")
+		debugPrint(users)
 	}
     
 	@IBAction func didTapBackButton(_ sender: Any) {
@@ -52,6 +48,8 @@ class UserListController: UIViewController {
 extension UserListController: UITableViewDelegate, UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		debugPrint("*********** UserListController *** numberOfRowsInSection users ********")
+		debugPrint(users)
 		return users.count
 	}
 
@@ -65,6 +63,8 @@ extension UserListController: UITableViewDelegate, UITableViewDataSource {
 		tableView.deselectRow(at: indexPath, animated: true)
 		let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let vc = storyboard.instantiateViewController(identifier: "UserProfileController") as! UserProfileController
+		debugPrint("*********** UserListController *** didSelectRowAt users ********")
+		debugPrint(users[indexPath.row])
 		vc.user = users[indexPath.row]
 		navigationController?.pushViewController(vc, animated: true)
     }
@@ -79,19 +79,36 @@ extension UserListController {
 	func getUsersFromFirebase() {
 
 		ref.observe(.value, with: { (snapshot) in
+			debugPrint("*********** UserListController ***  ref.observe(.value, with: { (snapshot) ********")
+			self.usersDataBaseSnapshot = [:]
+			debugPrint("usersDataBaseSnapshot: \(self.usersDataBaseSnapshot)")
             if let value = snapshot.value as? [String: Any] {
                 if let users = value["Users"] as? [String: Any] {
+					var usersLocal = [UserFirebase]()
+					debugPrint("usersLocal: \(usersLocal)")
+					self.users = []
+					debugPrint("users: \(self.users)")
                     self.usersDataBaseSnapshot = users
+					debugPrint("usersDataBaseSnapshot after assigning value: \(self.usersDataBaseSnapshot)")
 					for (key, value) in self.usersDataBaseSnapshot {
+						debugPrint("*********** usersDataBaseSnapshot KEY ********")
+						debugPrint(key)
+						debugPrint("*********** usersDataBaseSnapshot KEY ********")
+						debugPrint("*********** usersDataBaseSnapshot VALUE ********")
+						debugPrint(value)
+						debugPrint("*********** usersDataBaseSnapshot VALUE ********")
 						let user = UserFirebase()
 						user.id = key
 						user.properties = value as? [String: Any]
-						self.users.append(user)
-						self.users.sort { (first, second) -> Bool in
+						usersLocal.append(user)
+						usersLocal.sort { (first, second) -> Bool in
 							first.id! > second.id!
 						}
-						self.usersTableView.reloadData()
 					}
+					self.users = usersLocal
+					debugPrint("usersLocal: \(usersLocal.count)")
+					debugPrint("self.users: \(self.users)")
+					self.usersTableView.reloadData()
                 }
             }
           }) { (error) in

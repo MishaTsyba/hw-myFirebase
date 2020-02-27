@@ -39,7 +39,6 @@ class UserAddPropertyController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		debugPrint("*********** UserAddPropertyController *** viewWillAppear ********")
-//		debugPrint(user.properties)
 	}
 
 	@IBAction func didTapAddButton(_ sender: Any) {
@@ -59,6 +58,7 @@ extension UserAddPropertyController {
 	func addPropertyToFirebase(user: UserFirebase) {
 		ref.observeSingleEvent(of: .value, with: { (snapshot) in
 			debugPrint("*********** UserAddPropertyController addPropertyToFirebase  users **************")
+			self.usersDataBaseSnapshot = [:]
 //			debugPrint(snapshot)
 //			debugPrint(self.user.id)
 			if let value = snapshot.value as? [String: Any] {
