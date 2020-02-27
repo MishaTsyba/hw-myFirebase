@@ -30,7 +30,7 @@ class UserAddPropertyController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		debugPrint("*********** UserAddPropertyController *** viewDidLoad ********")
-		debugPrint(user.properties)
+//		debugPrint(user.properties)
 		designUI()
 		propertyNameTextField.delegate = self
 		propertyValueTextField.delegate = self
@@ -39,7 +39,7 @@ class UserAddPropertyController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		debugPrint("*********** UserAddPropertyController *** viewWillAppear ********")
-		debugPrint(user.properties)
+//		debugPrint(user.properties)
 	}
 
 	@IBAction func didTapAddButton(_ sender: Any) {
@@ -68,11 +68,11 @@ extension UserAddPropertyController {
 					debugPrint("*********** UserAddPropertyController *** usersDataBaseSnapshot *** BEFORE new property **************")
 					debugPrint(self.usersDataBaseSnapshot)
 					debugPrint("*********** UserAddPropertyController *** user.properties *** BEFORE new property **************")
-					debugPrint(self.user.properties)
+//					debugPrint(self.user.properties)
 					guard let currentUserId = user.id else {return}
 					debugPrint(currentUserId)
 					guard var userProperties = user.properties else {return}
-					debugPrint(user.properties)
+//					debugPrint(user.properties)
 					debugPrint(userProperties)
 					guard let newPropertyKey = self.propertyNameTextField.text else {return}
 					guard let newPropertyValue = self.propertyValueTextField.text else {return}
@@ -82,7 +82,7 @@ extension UserAddPropertyController {
 					debugPrint("*********** UserAddPropertyController *** usersDataBaseSnapshot *** AFTER new property **************")
 					debugPrint(self.usersDataBaseSnapshot)
 					debugPrint("*********** UserAddPropertyController *** user.properties *** AFTER new property **************")
-					debugPrint(self.user.properties)
+//					debugPrint(self.user.properties)
 					self.ref.child("Users").setValue(self.usersDataBaseSnapshot)
 				}
 			}
