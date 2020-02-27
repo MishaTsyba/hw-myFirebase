@@ -39,8 +39,6 @@ class UserAddPropertyController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(true)
 		debugPrint("*********** UserAddPropertyController *** viewWillAppear ********")
-		debugPrint(user.id)
-		debugPrint(user.properties)
 	}
 
 	@IBAction func didTapAddButton(_ sender: Any) {
